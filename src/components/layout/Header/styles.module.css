@@ -4,6 +4,7 @@
   padding: 10px 0;
   font-size: 22px;
   font-weight: 500;
+  user-select: none;
 }
 
 .bg a {

@@ -63,7 +63,11 @@ const Detail: React.FC = () => {
       <div className="container">
         <div className={styles.wrapper}>
           <div className={styles.box}>
-            <img src={character.image} alt="Avatar" draggable="false" />
+            <img
+              src={character.image ? character.image : "/default.png"}
+              alt="Avatar"
+              draggable="false"
+            />
             <div className={styles.info}>
               <h2>{character.name}</h2>
               {character.ancestry && (
@@ -78,7 +82,7 @@ const Detail: React.FC = () => {
               )}
               {character.gender && (
                 <p>
-                <span>{t("gender")}:</span> {character.gender}
+                  <span>{t("gender")}:</span> {character.gender}
                 </p>
               )}
               {character.house && (
