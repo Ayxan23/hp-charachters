@@ -1,0 +1,44 @@
+.bg,
+.not {
+  flex: 1;
+  background: rgb(35, 25, 44);
+  background: linear-gradient(
+    0deg,
+    rgba(35, 25, 44, 0.888) 0%,
+    rgba(57, 43, 72, 0.923) 88%
+  );
+  padding: 20px 0;
+}
+
+.bg h2{
+  text-align: center;
+  margin-bottom: 10px;
+  font-size: 32px;
+  font-weight: 600;
+  color: rgb(255, 197, 252);
+}
+
+.wrapper {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 20px;
+  width: 100%;
+}
+
+
+.not {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.center {
+  color: white;
+  font-size: 60px;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+.card{
+  background: rgb(182, 53, 182);
+}

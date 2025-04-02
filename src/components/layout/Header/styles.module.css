@@ -1,0 +1,32 @@
+.bg {
+  background-color: #000023;
+  color: #d7ae26;
+  padding: 10px 0;
+  font-size: 22px;
+  font-weight: 500;
+}
+
+.bg a {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.bg img {
+  height: 70px;
+  object-fit: contain;
+}
+
+.wrapper{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 20px;
+}
+
+.button {
+   background-color: black;
+   color: white;
+   font-size: 18px;
+   border: 1px solid rgb(104, 104, 104);
+}

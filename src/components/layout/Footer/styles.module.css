@@ -1,0 +1,26 @@
+.bg {
+  background-color: #000023;
+  color: rgba(255, 255, 255, 0.762);
+  padding: 40px 0;
+  font-weight: 300;
+  user-select: none;
+}
+
+.wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 5px;
+}
+
+.wrapper a {
+  color: rgb(120, 228, 255);
+}
+.wrapper a:hover {
+  text-decoration: underline;
+}
+
+.wrapper img {
+  height: 70px;
+  object-fit: contain;
+}
