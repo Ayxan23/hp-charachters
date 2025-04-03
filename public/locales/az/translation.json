@@ -1,6 +1,9 @@
 {
   "title": "Personajlar",
   "footer": "Bu sayt <1>Ayxan</1> tərəfindən hazırlanmışdır",
+  "loading": "Yüklənir...",
+  "error": "Xəta!",
+  "notfound": "Tapılmadı!",
   "ancestry": "soy",
   "actor": "aktyor",
   "gender": "cins",

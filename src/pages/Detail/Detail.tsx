@@ -4,14 +4,15 @@ import { useParams } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { useTranslation } from "react-i18next";
+import { mainUrl } from "../../config/api";
 
-type Wand = {
+interface Wand {
   wood: string;
   core: string;
   length: number;
-};
+}
 
-type Character = {
+interface Character {
   id: string;
   name: string;
   gender: string;
@@ -23,10 +24,10 @@ type Character = {
   ancestry: string;
   alive: boolean;
   wand: Wand;
-};
+}
 
 const fetchCharacters = async (): Promise<Character[]> => {
-  const res = await axios.get("https://hp-api.onrender.com/api/characters");
+  const res = await axios.get(mainUrl);
   return res.data;
 };
 const Detail: React.FC = () => {
@@ -42,19 +43,19 @@ const Detail: React.FC = () => {
   if (isLoading)
     return (
       <div className={styles.bg}>
-        <p className={styles.center}>Loading...</p>
+        <p className={styles.center}>{t("loading")}</p>
       </div>
     );
   if (error)
     return (
       <div className={styles.bg}>
-        <p className={styles.center}>Error!</p>
+        <p className={styles.center}>{t("error")}</p>
       </div>
     );
   if (!character)
     return (
       <div className={styles.bg}>
-        <p className={styles.center}>Not found!</p>
+        <p className={styles.center}>{t("notfound")}</p>
       </div>
     );
 

@@ -6,13 +6,15 @@ import { useQuery } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useCharacterStore } from "../../store/characterStore";
-type Wand = {
+import { mainUrl } from "../../config/api";
+
+interface Wand {
   wood: string;
   core: string;
   length: number;
-};
+}
 
-type Character = {
+interface Character {
   id: string;
   name: string;
   image: string;
@@ -21,10 +23,10 @@ type Character = {
   actor: string;
   alive: boolean;
   wand: Wand;
-};
+}
 
 const fetchCharacters = async (): Promise<Character[]> => {
-  const res = await axios.get("https://hp-api.onrender.com/api/characters");
+  const res = await axios.get(mainUrl);
   return res.data.slice(0, 25);
 };
 
@@ -49,13 +51,13 @@ const Characters: React.FC = () => {
   if (isLoading)
     return (
       <div className={styles.not}>
-        <p className={styles.center}>Loading...</p>
+        <p className={styles.center}>{t("loading")}</p>
       </div>
     );
   if (error)
     return (
       <div className={styles.not}>
-        <p className={styles.center}>Error!</p>
+        <p className={styles.center}>{t("error")}</p>
       </div>
     );
 

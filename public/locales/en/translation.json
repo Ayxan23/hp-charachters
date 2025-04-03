@@ -1,6 +1,9 @@
 {
   "title": "Charachters",
   "footer": "This site was built by <1>Aykhan</1>",
+  "loading": "Loading...",
+  "error": "Error!",
+  "notfound": "Not found!",
   "ancestry": "ancestry",
   "actor": "actor",
   "gender": "gender",
