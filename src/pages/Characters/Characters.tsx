@@ -1,44 +1,17 @@
 import React, { useEffect } from "react";
 import styles from "./styles.module.css";
 import { Flex, Text, Box, Card, Avatar } from "@radix-ui/themes";
-import axios from "axios";
-import { useQuery } from "@tanstack/react-query";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { useCharacterStore } from "../../store/characterStore";
-import { mainUrl } from "../../config/api";
-
-interface Wand {
-  wood: string;
-  core: string;
-  length: number;
-}
-
-interface Character {
-  id: string;
-  name: string;
-  image: string;
-  house: string;
-  species: string;
-  actor: string;
-  alive: boolean;
-  wand: Wand;
-}
-
-const fetchCharacters = async (): Promise<Character[]> => {
-  const res = await axios.get(mainUrl);
-  return res.data.slice(0, 25);
-};
+import { useCharacters } from "../../hooks/useCharacter";
 
 const Characters: React.FC = () => {
   const setRefetchCharacters = useCharacterStore(
     (state) => state.setRefetchCharacters
   );
 
-  const { data, isLoading, error, refetch } = useQuery<Character[]>({
-    queryKey: ["characters"],
-    queryFn: fetchCharacters,
-  });
+  const { data, isLoading, error, refetch } = useCharacters();
 
   useEffect(() => {
     setRefetchCharacters(() => {

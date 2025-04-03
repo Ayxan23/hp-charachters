@@ -1,42 +1,13 @@
 import React from "react";
 import styles from "./styles.module.css";
 import { useParams } from "react-router-dom";
-import { useQuery } from "@tanstack/react-query";
-import axios from "axios";
 import { useTranslation } from "react-i18next";
-import { mainUrl } from "../../config/api";
+import { useCharacters } from "../../hooks/useCharacter";
 
-interface Wand {
-  wood: string;
-  core: string;
-  length: number;
-}
-
-interface Character {
-  id: string;
-  name: string;
-  gender: string;
-  dateOfBirth: string;
-  image: string;
-  house: string;
-  species: string;
-  actor: string;
-  ancestry: string;
-  alive: boolean;
-  wand: Wand;
-}
-
-const fetchCharacters = async (): Promise<Character[]> => {
-  const res = await axios.get(mainUrl);
-  return res.data;
-};
 const Detail: React.FC = () => {
-  const { id } = useParams();
-  const { data, isLoading, error } = useQuery<Character[]>({
-    queryKey: ["characters"],
-    queryFn: fetchCharacters,
-  });
+  const { data, isLoading, error } = useCharacters();
 
+  const { id } = useParams();
   const character = data?.find((char) => char.id === id);
   const { t } = useTranslation();
 

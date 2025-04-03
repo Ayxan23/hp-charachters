@@ -8,7 +8,7 @@ import { Theme } from "@radix-ui/themes";
 import Footer from "./components/layout/Footer/Footer";
 import Header from "./components/layout/Header/Header";
 
-import Characters from "./pages/Charachters/Characters";
+import Characters from "./pages/Characters/Characters";
 import Detail from "./pages/Detail/Detail";
 import { useTranslation } from "react-i18next";
 
