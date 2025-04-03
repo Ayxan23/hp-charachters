@@ -71,7 +71,7 @@ const Characters: React.FC = () => {
                   <Flex gap="3" align="center">
                     <Avatar
                       size="4"
-                      src={item.image}
+                      src={item.image ? item.image : "/default2.jpg"}
                       radius="full"
                       fallback="o"
                     />

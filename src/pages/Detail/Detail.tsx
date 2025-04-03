@@ -64,7 +64,7 @@ const Detail: React.FC = () => {
         <div className={styles.wrapper}>
           <div className={styles.box}>
             <img
-              src={character.image ? character.image : "/default.png"}
+              src={character.image ? character.image : "/default.jpg"}
               alt="Avatar"
               draggable="false"
             />
