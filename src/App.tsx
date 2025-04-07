@@ -1,15 +1,15 @@
-import "./assets/styles/reset.css";
-import "./assets/styles/global.css";
+import "@/assets/styles/reset.css";
+import "@/assets/styles/global.css";
 import "@radix-ui/themes/styles.css";
 
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { Theme } from "@radix-ui/themes";
 
-import Footer from "./components/layout/Footer/Footer";
-import Header from "./components/layout/Header/Header";
+import Footer from "@/components/layout/Footer/Footer";
+import Header from "@/components/layout/Header/Header";
 
-import Characters from "./pages/Characters/Characters";
-import Detail from "./pages/Detail/Detail";
+import Characters from "@/pages/Characters/Characters";
+import Detail from "@/pages/Detail/Detail";
 import { useTranslation } from "react-i18next";
 
 function App() {

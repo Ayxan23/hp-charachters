@@ -7,8 +7,7 @@ const Footer: React.FC = () => {
   return (
     <div className={styles.bg}>
       <div className="container">
-        <div className={styles.wrapper}>
-          {/* {t("footer")} */}
+        <div className={styles.wrapper}>    
           <Trans
             i18nKey="footer"
             components={{

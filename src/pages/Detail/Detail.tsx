@@ -2,7 +2,7 @@ import React from "react";
 import styles from "./styles.module.css";
 import { useParams } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { useCharacters } from "../../hooks/useCharacter";
+import { useCharacters } from "@/hooks/useCharacter";
 
 const Detail: React.FC = () => {
   const { data, isLoading, error } = useCharacters();

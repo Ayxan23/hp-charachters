@@ -3,7 +3,7 @@ import styles from "./styles.module.css";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
 import { Select } from "@radix-ui/themes";
-import { useCharacterStore } from "../../../store/characterStore";
+import { useCharacterStore } from "@/store/characterStore";
 
 const Header: React.FC = () => {
   const { i18n } = useTranslation();

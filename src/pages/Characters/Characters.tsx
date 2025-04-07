@@ -3,8 +3,8 @@ import styles from "./styles.module.css";
 import { Flex, Text, Box, Card, Avatar } from "@radix-ui/themes";
 import { Link } from "react-router-dom";
 import { useTranslation } from "react-i18next";
-import { useCharacterStore } from "../../store/characterStore";
-import { useCharacters } from "../../hooks/useCharacter";
+import { useCharacterStore } from "@/store/characterStore";
+import { useCharacters } from "@/hooks/useCharacter";
 
 const Characters: React.FC = () => {
   const setRefetchCharacters = useCharacterStore(
